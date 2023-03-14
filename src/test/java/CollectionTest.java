@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Novikov Nikita 14.03.2023
@@ -12,7 +11,7 @@ public class CollectionTest {
 
     @Before
     public void setUp() throws Exception {
-        carCollection = new CarLinkedList();
+        carCollection = new CarHashSet();
         for (int i = 0; i < 100; i++) {
             carCollection.add(new Car("Brand" + i, i));
         }
@@ -22,5 +21,17 @@ public class CollectionTest {
     public void contains(){
         assertTrue(carCollection.contains(new Car("Brand20", 20)));
         assertFalse(carCollection.contains(new Car("Brand200", 20)));
+    }
+
+    @Test
+    public void TestForEach(){
+        int index = 0;
+        while (carCollection.iterator().hasNext()){
+            Car car = carCollection.iterator().next();
+        }
+        for (Car car : carCollection){
+            index++;
+        }
+        assertEquals(100, index);
     }
 }

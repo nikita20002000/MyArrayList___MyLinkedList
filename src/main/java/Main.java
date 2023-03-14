@@ -2,19 +2,20 @@
  * Created by Nikita Novikov
  */
 
+import java.util.*;
+
 /**
  *@author Novikov Nikita 13.03.2023
  */
 public class Main {
     public static void main(String[] args) {
-        Car car_1 = new Car("Bmw", 1);
-        Car car_2 = new Car("Bmw", 1);
+            TreeSet<Car> cars = new TreeSet<>();
+        for (int i = 0; i < 100; i++){
+            cars.add(new Car("Brand" + i, i));
+        }
 
-        System.out.println(car_1.equals(car_2));
-
-        System.out.println(car_1.hashCode());
-        System.out.println(car_2.hashCode());
-
-
+        for (Car car : cars){
+            System.out.println(car);
+        }
     }
 }

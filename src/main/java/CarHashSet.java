@@ -2,6 +2,8 @@
  * Created by Nikita Novikov
  */
 
+import java.util.Iterator;
+
 /**
  *@author Novikov Nikita 14.03.2023
  */
@@ -120,6 +122,38 @@ public class CarHashSet implements CarSet{
     }
     private int GetElementPosition(Car car, int arrayLenght) {
         return Math.abs(car.hashCode() % arrayLenght);
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return new Iterator<Car>() {
+
+            int index = 0;     //хранит количество элементов, которые мы уже обработали
+            int arrayIndex = 0;
+            Entry entry;
+            @Override
+            public boolean hasNext() {
+                return index < size;       //Если индекс меньше чем массив, значит в коллекции есть еще элементы
+            }
+
+            @Override
+            public Car next() {
+                while (array[arrayIndex] == null){     //находим порядковый номер ячейки в массиве, где лежит что-нибудь
+                    arrayIndex++;
+                }
+                if (entry == null){          //если переменной Entry мы еще не присваивали значений
+                    entry = array[arrayIndex]; //тогда присвоить значение элемента
+                }
+                Car result = entry.value;     //получаем из элемента значение
+                entry = entry.next;           //в ячейке могут лежать еще значения, поэтому присваиваем значение next
+
+                if (entry == null){           //если в next больше нет значений
+                    arrayIndex++;
+                }
+                index++;         //когда вернули один из элементов увеличим индекс на один
+                return result;
+            }
+        };
     }
 
     private static class Entry {            //класс entry который хранит значения и ссылки

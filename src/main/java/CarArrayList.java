@@ -3,6 +3,7 @@
  */
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  *@author Novikov Nikita 12.03.2023
@@ -86,5 +87,24 @@ public class CarArrayList implements CarList{
         if (size >= array.length){
             array = Arrays.copyOf(array, array.length * 2);
         }
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return new Iterator<Car>() {
+
+            int index = 0;
+            @Override
+            public boolean hasNext() {
+                return index < size;
+            }
+
+            @Override
+            public Car next() {
+                Car car = array[index];
+                index++;
+                return car;
+            }
+        };
     }
 }

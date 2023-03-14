@@ -2,6 +2,8 @@
  * Created by Nikita Novikov
  */
 
+import java.util.Iterator;
+
 /**
  *@author Novikov Nikita 12.03.2023
  */
@@ -129,8 +131,24 @@ public class CarLinkedList implements CarList{
         return node;
     }
 
+    @Override
+    public Iterator<Car> iterator() {
+        return new Iterator<Car>() {
 
+            private Node node = first;
+            @Override
+            public boolean hasNext() {
+                return node != null;
+            }
 
+            @Override
+            public Car next() {
+                Car car = node.value;
+                node = node.next;
+                return car;
+            }
+        };
+    }
 
 
     private static class Node {

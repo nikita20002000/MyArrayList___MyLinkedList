@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb146ad7-fdac-481a-b364-a983edd0b54d" name="Changes" comment="Add realization of MyHashSet with tests">
+    <list default="true" id="fb146ad7-fdac-481a-b364-a983edd0b54d" name="Changes" comment="Add Inteface CarCollection for other interfaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarHashSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CarLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CollectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CollectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +27,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +69,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CollectionTest">
+  <component name="RunManager" selected="JUnit.CarMapTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Collections.main" />
@@ -75,30 +77,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Collections.test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarListTest" />
+      <option name="MAIN_CLASS_NAME" value="CarMapTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CarListTest.WhenIndexOutOfBoundTHenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarMapTest.removeReturnTrueOnlyOnce" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Collections.test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarListTest" />
-      <option name="METHOD_NAME" value="WhenIndexOutOfBoundTHenThrowException" />
+      <option name="MAIN_CLASS_NAME" value="CarMapTest" />
+      <option name="METHOD_NAME" value="removeReturnTrueOnlyOnce" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Collections.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarSetTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,13 +105,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CollectionTest.TestForEach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CollectionTest" />
+      <option name="METHOD_NAME" value="TestForEach" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CollectionTest" />
-        <item itemvalue="JUnit.CarSetTest" />
-        <item itemvalue="JUnit.CarListTest" />
+        <item itemvalue="JUnit.CarMapTest" />
+        <item itemvalue="JUnit.CarMapTest.removeReturnTrueOnlyOnce" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CarListTest.WhenIndexOutOfBoundTHenThrowException" />
+        <item itemvalue="JUnit.CollectionTest.TestForEach" />
+        <item itemvalue="JUnit.CollectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +137,8 @@
       <workItem from="1678617529673" duration="3484000" />
       <workItem from="1678623342936" duration="3051000" />
       <workItem from="1678698254419" duration="6040000" />
-      <workItem from="1678734289066" duration="6711000" />
+      <workItem from="1678734289066" duration="8150000" />
+      <workItem from="1678809722714" duration="9357000" />
     </task>
     <task id="LOCAL-00001" summary="Change Files">
       <created>1678778625332</created>
@@ -150,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678778684525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new method &quot;contains&quot; which return true/false if Element is in collection">
+      <created>1678780719286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678780719286</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Inteface CarCollection for other interfaces">
+      <created>1678780789020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678780789020</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +188,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change Files" />
     <MESSAGE value="Add realization of MyHashSet with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add realization of MyHashSet with tests" />
+    <MESSAGE value="Added new method &quot;contains&quot; which return true/false if Element is in collection" />
+    <MESSAGE value="Add Inteface CarCollection for other interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Inteface CarCollection for other interfaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
