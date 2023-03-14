@@ -21,7 +21,7 @@ public class CarLinkedList implements CarList{
     }
 
     @Override
-    public void add(Car car) {
+    public boolean add(Car car) {
         if (size == 0){
             Node node = new Node(null, car, null);
             first = node;
@@ -32,17 +32,16 @@ public class CarLinkedList implements CarList{
             secondLast.next = last;
         }
         size++;
-
+        return true;
     }
 
     @Override
-    public void add(Car car, int index) {
+    public boolean add(Car car, int index) {
         if (index < 0 || index > size){              //
             throw new IndexOutOfBoundsException();   //Проверяем индекс, если мы за пределами нашей коллекци, то бросаем исключение
         }                                            //
         if (index == size){                          // Проверяем не является ли индекс самым последним элементом
-            add(car);
-            return;
+            return add(car);
         }
         Node nodeNext = getNode(index);     //получаем элемент с нашим индексом(3)   //если дошли до этой строчки, то индекс нормальный, находится в пределах коллекции
         Node nodePrevious = nodeNext.previos;   //получаем элемент с предыдущи индексом(2)
@@ -54,20 +53,19 @@ public class CarLinkedList implements CarList{
             first = newnode;   //если предыдущего элемента нет(null), то говорим что это первый элемент
         }
         size++;
+        return true;
     }
 
     @Override
     public boolean remove(Car car) {
-        Node node = first;     //создаем ссылку на первый элемент
-        for (int i = 0; i < size; i++){
-            if (node.value.equals(car)) {           //если значение равно кар
-               return removeAt(i);
-
-            }
-            node = node.next;
+        int index = FindElement(car);
+        if (index != -1) {
+            return removeAt(index);
         }
         return false;
     }
+
+
 
     @Override
     public boolean removeAt(int index) {
@@ -102,6 +100,23 @@ public class CarLinkedList implements CarList{
         size = 0;
 
     }
+
+    @Override
+    public boolean contains(Car car) {
+        return FindElement(car) != -1;
+    }
+    private int FindElement(Car car) {
+        Node node = first;     //создаем ссылку на первый элемент
+        for (int i = 0; i < size; i++){
+            if (node.value.equals(car)) {           //если значение равно кар
+                return i;
+
+            }
+            node = node.next;
+        }
+        return -1;
+    }
+
     private Node getNode(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();

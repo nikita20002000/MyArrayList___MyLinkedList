@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb146ad7-fdac-481a-b364-a983edd0b54d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="fb146ad7-fdac-481a-b364-a983edd0b54d" name="Changes" comment="Add realization of MyHashSet with tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarHashSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
+        <option value="Record" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +67,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CarSetTest">
+  <component name="RunManager" selected="JUnit.CollectionTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Collections.main" />
@@ -78,16 +80,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CarListTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CarListTest.WhenClearThenSizeMustBe0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Collections.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CarListTest" />
-      <option name="METHOD_NAME" value="WhenClearThenSizeMustBe0" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,13 +103,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CollectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Collections.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CollectionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CollectionTest" />
         <item itemvalue="JUnit.CarSetTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CarListTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CarListTest.WhenIndexOutOfBoundTHenThrowException" />
-        <item itemvalue="JUnit.CarListTest.WhenClearThenSizeMustBe0" />
       </list>
     </recent_temporary>
   </component>
@@ -133,8 +134,23 @@
       <workItem from="1678617529673" duration="3484000" />
       <workItem from="1678623342936" duration="3051000" />
       <workItem from="1678698254419" duration="6040000" />
-      <workItem from="1678734289066" duration="4330000" />
+      <workItem from="1678734289066" duration="6711000" />
     </task>
+    <task id="LOCAL-00001" summary="Change Files">
+      <created>1678778625332</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678778625332</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add realization of MyHashSet with tests">
+      <created>1678778684525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678778684525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +166,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change Files" />
+    <MESSAGE value="Add realization of MyHashSet with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add realization of MyHashSet with tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

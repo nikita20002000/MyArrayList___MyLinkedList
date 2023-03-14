@@ -85,6 +85,28 @@ public class CarHashSet implements CarSet{
 
     }
 
+    @Override
+    public boolean contains(Car car) {
+        int position = GetElementPosition(car, array.length);
+        if (array[position] == null){
+            return false;
+        }
+        Entry secondlas = array[position];       //сохраняем значения предпоследнего элемента
+        Entry last = secondlas.next;             //сохраняем значения последнего элемента
+        if (secondlas.value.equals(car)) {       //проверяем равен ли он нашей машине, которую надо удалить
+            return true;
+        }
+        while (last != null) {
+            if (last.value.equals(car)){
+                return true;
+            }else {
+                last = last.next;
+            }
+        }
+
+        return false;
+    }
+
     private void IncreaseArray() {                       //Добавляем метод для пересчета позиций в массиве после его увеличения
         Entry[] newArray = new Entry[array.length * 2];
         for (Entry entry : array){
